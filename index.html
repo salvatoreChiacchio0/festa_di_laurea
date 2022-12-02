@@ -38,8 +38,8 @@
         </p>
 
         <button id="partecipa">Parteciperò</button>
-        <button id="regalo">Regalo</button>
-        <button id="info">Info Utili</button>
+        <!--<button id="regalo">Regalo</button>
+        <button id="info">Info Utili</button>-->
 
 
         <!-- Primo Modal -->
@@ -91,13 +91,13 @@
 
     // Get the modal
     var modal = document.getElementById("myModal");
-    var regaloModal = document.getElementById("regaloModal");
-    var infoModal = document.getElementById("infoModal");
+    /*var regaloModal = document.getElementById("regaloModal");
+    var infoModal = document.getElementById("infoModal");*/
 
     // Get the button that opens the modal
     var btn = document.getElementById("partecipa");
-    var btnRegalo = document.getElementById("regalo");
-    var btnInfo = document.getElementById("info");
+   /* var btnRegalo = document.getElementById("regalo");
+    var btnInfo = document.getElementById("info");*/
 
 
     // Get the <span> element that closes the modal
@@ -107,23 +107,23 @@
     btn.onclick = function () {
         modal.style.display = "block";
     }
-    btnRegalo.onclick = function () {
+    /*btnRegalo.onclick = function () {
         regaloModal.style.display = "block";
     }
     btnInfo.onclick = function () {
         infoModal.style.display = "block";
-    }
+    }*/
 
     // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
         modal.style.display = "none";
     }
-    span.onclick = function () {
+    /*span.onclick = function () {
         regaloModal.style.display = "none";
     }
     span.onclick = function () {
         infoModal.style.display = "none";
-    }
+    }*/
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
