@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title> Laurea Sasy</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Ing Sasy</a>
+    </header>
+    <section>
+        <img src="img/Skyline_Back-removebg-preview.png" id="behind">
+        <img src="img/sasy_moon.png" id="sasy">
+        <img src="img/Skyline_Front-removebg-cut.png" id="front">
+
+    </section>
+    <div class="sec">
+        <h2 class="neon">Festa di Laurea</h2>
+        <p>
+            Come ben sapete il 28 Settembre ho conseguito la laurea in Ingegneria Informatica presso il Politecnico di
+            Milano. <br>
+            (Ora capite a cosa è servita)
+            <br> <br>
+            Dovete sucarmelo porca madonna. <br> <br>
+            E' stato un giorno stupendo pieno di sorrisi e lacrime, che ahimè non ho potuto condividere con tutte le
+            persone a me care. <br>
+            Sto parlando proprio di voi, i miei amici, con alcuni ho festeggiato già a Milano ma vorrei condividere del
+            tempo anche con coloro che non sono stati presenti.
+            <br>
+
+            <br>Per continuare vi prego di cliccare sui pulsanti in basso!
+        </p>
+
+        <button id="partecipa">Parteciperò</button>
+        <button id="regalo">Regalo</button>
+        <button id="info">Info Utili</button>
+
+
+        <!-- Primo Modal -->
+        <div id="myModal" class="modal">
+             <div class="modal-content">
+                <h4>Vuoi ridurti in queste condizioni?</h4>
+                <span class="img-drunk"></span>
+                <p>
+                    <br> Il giorno 27 Dicembre, non prendere impegni perchè sei invitato in qualche posto che ancora
+                    non ho deciso per festeggiare insieme!
+                </p>
+                <span class="close"></span> 
+            </div>
+        </div>
+
+        <!-- Secondo Modal -->
+        <div id="regaloModal" class="modal">
+            <div class="modal-content">
+               test
+               <span class="close"></span> 
+           </div>
+       </div>
+
+       <!-- Terzo Modal -->
+       <div id="infoModal" class="modal">
+        <div class="modal-content">
+           test2
+           <span class="close"></span> 
+       </div>
+   </div>
+
+    </div>
+</body>
+<script>
+    let moon = document.getElementById("sasy")
+    let behind = document.getElementById("behind")
+    let front = document.getElementById("front")
+
+    window.addEventListener('scroll', function () {
+        let value = window.scrollY;
+        moon.style.top = value * 0.8 + 'px'
+    })
+
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    var regaloModal = document.getElementById("regaloModal");
+    var infoModal = document.getElementById("infoModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("partecipa");
+    var btnRegalo = document.getElementById("regalo");
+    var btnInfo = document.getElementById("info");
+
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+    btnRegalo.onclick = function () {
+        regaloModal.style.display = "block";
+    }
+    btnInfo.onclick = function () {
+        infoModal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+    span.onclick = function () {
+        regaloModal.style.display = "none";
+    }
+    span.onclick = function () {
+        infoModal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        console.log(event.target,modal);
+         if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    } 
+    
+</script>
+
+</html>
