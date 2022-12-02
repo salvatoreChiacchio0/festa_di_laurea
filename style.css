@@ -137,3 +137,25 @@ section img  #front{
     text-decoration: none;
     cursor: pointer;
   }
+
+
+
+  .other-content{
+    height: 100vh;
+    width: 100%;
+    display: flex !important;
+  justify-content: center;
+  align-items: center;
+   }
+  .other-text{
+    color: #f8e783;
+  }
+  @media screen and (min-width: 0px) and (max-width: 600px) {
+    .body-phone { display: block; }  /* show it on small screens */
+    .other-body { display: none; }   /* hide it elsewhere */
+
+  }
+  
+  @media screen and (min-width: 601px) and (max-width: 3000px) {
+    .body-phone { display: none; }   /* hide it elsewhere */
+  }
