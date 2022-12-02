@@ -11,82 +11,95 @@
 
 <body>
     <div class="body-phone">
-    <header>
-        <a href="#" class="logo">Ing Sasy</a>
-    </header>
-    <section>
-        <img src="img/Skyline_Back-removebg-preview.png" id="behind">
-        <img src="img/sasy_moon.png" id="sasy">
-        <img src="img/Skyline_Front-removebg-cut.png" id="front">
+        <header>
+            <a href="#" class="logo">Ing Sasy</a>
+        </header>
+        <section>
+            <img src="img/18.png" id="sky" style="transform:translate(-55px,-60px) ">
+            <img src="img/18.png" id="sky2">
 
-    </section>
-    <div class="sec">
-        <h2 class="neon">Festa di Laurea</h2>
-        <p>
-            Come ben sapete il 28 Settembre ho conseguito la laurea in Ingegneria Informatica presso il Politecnico di
-            Milano. <br>
-            (Ora capite a cosa è servita)
-            <br> <br>
-            Dovete sucarmelo porca madonna. <br> <br>
-            E' stato un giorno stupendo pieno di sorrisi e lacrime, che ahimè non ho potuto condividere con tutte le
-            persone a me care. <br>
-            Sto parlando proprio di voi, i miei amici, con alcuni ho festeggiato già a Milano ma vorrei condividere del
-            tempo anche con coloro che non sono stati presenti.
-            <br>
+            <img src="img/Skyline_Back-removebg-preview.png" id="behind">
+            <img src="img/sasy_moon.png" id="sasy">
+            <img src="img/Skyline_Front-removebg-cut.png" id="front">
 
-            <br>Per continuare vi prego di cliccare sui pulsanti in basso!
-        </p>
+        </section>
+        <div class="sec">
+            <h2 class="neon">Festa di Laurea</h2>
+            <p>
+                Come ben sapete il 28 Settembre ho conseguito la laurea in Ingegneria Informatica presso il Politecnico
+                di
+                Milano. <br>
+                (Ora capite a cosa è servita)
+                <br> <br>
+                Dovete sucarmelo porca madonna. <br> <br>
+                E' stato un giorno stupendo pieno di sorrisi e lacrime, che ahimè non ho potuto condividere con tutte le
+                persone a me care. <br>
+                Sto parlando proprio di voi, i miei amici, con alcuni ho festeggiato già a Milano ma vorrei condividere
+                del
+                tempo anche con coloro che non sono stati presenti.
+                <br>
 
-        <button id="partecipa">Parteciperò</button>
-        <!--<button id="regalo">Regalo</button>
+                <br>Per continuare vi prego di cliccare sui pulsanti in basso!
+            </p>
+
+            <button id="partecipa">Parteciperò</button>
+            <!--<button id="regalo">Regalo</button>
         <button id="info">Info Utili</button>-->
 
 
-        <!-- Primo Modal -->
-        <div id="myModal" class="modal">
-             <div class="modal-content">
-                <h4>Vuoi ridurti in queste condizioni?</h4>
-                <span class="img-drunk"></span>
-                <p>
-                    <br> Il giorno 27 Dicembre, non prendere impegni perchè sei invitato in qualche posto che ancora
-                    non ho deciso per festeggiare insieme!
-                </p>
-                <span class="close"></span> 
+            <!-- Primo Modal -->
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <h4>Vuoi ridurti in queste condizioni?</h4>
+                    <span class="img-drunk"></span>
+                    <p>
+                        <br> Il giorno 27 Dicembre, non prendere impegni perchè sei invitato in qualche posto che ancora
+                        non ho deciso per festeggiare insieme!
+                    </p>
+                    <span class="close"></span>
+                </div>
             </div>
+
+            <!-- Secondo Modal -->
+            <div id="regaloModal" class="modal">
+                <div class="modal-content">
+                    test
+                    <span class="close"></span>
+                </div>
+            </div>
+
+            <!-- Terzo Modal -->
+            <div id="infoModal" class="modal">
+                <div class="modal-content">
+                    test2
+                    <span class="close"></span>
+                </div>
+            </div>
+
         </div>
-
-        <!-- Secondo Modal -->
-        <div id="regaloModal" class="modal">
-            <div class="modal-content">
-               test
-               <span class="close"></span> 
-           </div>
-       </div>
-
-       <!-- Terzo Modal -->
-       <div id="infoModal" class="modal">
-        <div class="modal-content">
-           test2
-           <span class="close"></span> 
-       </div>
-   </div>
-
-    </div>
     </div>
     <div class="other-body">
         <div class="other-content">
-            <span class="other-text">Apri questo link da telefono in verticale, non mi andava di programmare per bene</span>
+            <span class="other-text">Apri questo link da telefono in verticale, non mi andava di programmare per
+                bene</span>
         </div>
     </div>
 </body>
 <script>
     let moon = document.getElementById("sasy")
+    let sky = document.getElementById("sky")
+    let sky2 = document.getElementById("sky2")
+
+
     let behind = document.getElementById("behind")
     let front = document.getElementById("front")
 
     window.addEventListener('scroll', function () {
         let value = window.scrollY;
         moon.style.top = value * 0.8 + 'px'
+        sky.style.left = value * 0.25 + 'px'
+        sky2.style.left = value * 0.25 + 'px'
+
     })
 
     // Get the modal
@@ -96,8 +109,8 @@
 
     // Get the button that opens the modal
     var btn = document.getElementById("partecipa");
-   /* var btnRegalo = document.getElementById("regalo");
-    var btnInfo = document.getElementById("info");*/
+    /* var btnRegalo = document.getElementById("regalo");
+     var btnInfo = document.getElementById("info");*/
 
 
     // Get the <span> element that closes the modal
@@ -127,12 +140,12 @@
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
-        console.log(event.target,modal);
-         if (event.target == modal) {
+        console.log(event.target, modal);
+        if (event.target == modal) {
             modal.style.display = "none";
         }
-    } 
-    
+    }
+
 </script>
 
 </html>

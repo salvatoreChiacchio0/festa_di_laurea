@@ -1,20 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
-*
-{
+
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
-}
-body
-{
-    min-height: 100vh;
-    background: linear-gradient(black,#1A1A1A);
-    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
 }
 
-header
-{
+.body-phone {
+    min-height: 100vh;
+    background: linear-gradient(black, #1A1A1A);
+    scroll-behavior: smooth;
+    overflow-x: hidden !important;
+}
+#sky{
+    transform: translateY(30px);
+}
+header {
     position: absolute;
     top: 0;
     left: 0;
@@ -24,7 +26,8 @@ header
     justify-content: center;
     z-index: 1000;
 }
-header .logo{
+
+header .logo {
     color: #f8e783;
     font-weight: 700;
     font-size: 2em;
@@ -32,130 +35,167 @@ header .logo{
     letter-spacing: 2px;
     text-decoration: none;
 }
-section{
+
+section {
     position: relative;
     width: 100%;
     height: 100vh;
     padding: 100px;
     display: flex;
     justify-content: center;
-    align-items:center
-    
+    align-items: center
 }
-section::before{
+
+section::before {
     content: '';
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 100px;
 }
-section img  {
+
+section img {
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-section img  {
+
+section img {
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    overflow-x: hidden !important;
+
 }
-section img  #front{
+
+#sky,#sky2{
+    width: 100vw;
+    overflow-x: hidden !important;
+}
+section img #front {
     z-index: 10;
 }
- 
-#text{
+
+#text {
     position: absolute;
     color: #f8e783;
     white-space: nowrap;
     font-size: 7.5vw;
-     z-index: 9;
- }
+    z-index: 9;
+}
 
- .sec{
+.sec {
     position: relative;
     padding: 30px;
     background-color: #132c28;
     color: #f8e783;
- }
- .neon{
-    margin-bottom: 10px;
- }
+}
 
- .text-signed{
+.neon {
+    margin-bottom: 10px;
+}
+
+.text-signed {
     text-decoration: line-through;
- }
- .img-drunk{
+}
+
+.img-drunk {
     width: 100%;
     height: 30vh;
     background: url('img/sasy_drunk.jpg');
-     background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     display: inline-block;
     margin-top: 10px;
- }
- 
+}
+
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content */
-  .modal-content {
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
     background-color: #132c28;
     margin: auto;
     padding: 20px;
-     width: 80%;
-  }
-  
-  /* The Close Button */
-  .close {
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
     color: #aaaaaa;
     float: right;
-     font-weight: bold;
-     margin-bottom: 100px;
-  }
-  
-  .close:hover,
-  .close:focus {
+    font-weight: bold;
+    margin-bottom: 100px;
+}
+
+.close:hover,
+.close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
-  }
+}
 
 
 
-  .other-content{
+.other-content {
     height: 100vh;
     width: 100%;
     display: flex !important;
-  justify-content: center;
-  align-items: center;
-   }
-  .other-text{
-    color: #f8e783;
-  }
-  @media screen and (min-width: 0px) and (max-width: 600px) {
-    .body-phone { display: block; }  /* show it on small screens */
-    .other-body { display: none; }   /* hide it elsewhere */
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden !important;
 
-  }
-  
-  @media screen and (min-width: 601px) and (max-width: 3000px) {
-    .body-phone { display: none; }   /* hide it elsewhere */
-  }
+}
+
+.other-text {
+    color: #f8e783;
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+    .body-phone {
+        display: block;
+    }
+
+    /* show it on small screens */
+    .other-body {
+        display: none;
+    }
+
+    /* hide it elsewhere */
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 3000px) {
+    .body-phone {
+        display: none;
+    }
+
+    /* hide it elsewhere */
+}
